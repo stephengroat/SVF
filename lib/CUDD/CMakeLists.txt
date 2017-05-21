@@ -1,20 +1,20 @@
 set(SOURCES
        cuddAddNeg.c
        cuddBddCorr.c
-       cuddDecomp.c
+       cuddDecomp.cpp
        cuddInit.c
        cuddRead.c
        cuddSubsetSP.c
-       cuddZddIsop.c
+       cuddZddIsop.cpp
        datalimit.c
        dddmpNodeBdd.c
-       safe_mem.c
-       cpu_stats.c
-       cuddAddWalsh.c
+       safe_mem.cpp
+       cpu_stats.cpp
+       cuddAddWalsh.cpp
        cuddBddIte.c
        cuddEssent.c
        cuddInteract.c
-       cuddRef.c
+       cuddRef.cpp
        cuddSymmetry.c
        cuddZddLin.c
        dddmpBinary.c
@@ -30,8 +30,8 @@ set(SOURCES
        cuddTable.c
        cuddZddMisc.c
        dddmpConvert.c
-       dddmpStoreAdd.c
-       mtrGroup.c
+       dddmpStoreAdd.cpp
+       mtrGroup.cpp
        state.c
        cuddAddAbs.c
        cuddAnneal.c
