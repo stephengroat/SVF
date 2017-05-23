@@ -12,12 +12,14 @@ addons:
 matrix:
   include:
     - os: osx
-      env: CONFIG_ARGS="-DCMAKE_BUILD_TYPE:STRING=Debug" LLVM_DIR=
+      env:
+        - CONFIG_ARGS="-DCMAKE_BUILD_TYPE:STRING=Debug" LLVM_DIR=
       install: brew install llvm
       cache:
         directories: Library/Caches/Homebrew/
     - os: osx
-      env: CONFIG_ARGS= LLVM_DIR=
+      env:
+        - CONFIG_ARGS= LLVM_DIR=
       install: brew install llvm
       cache:
         directories: Library/Caches/Homebrew/
