@@ -13,14 +13,14 @@ matrix:
   include:
     - os: osx
       env:
-        - CXX=clang++ PATH=/usr/local/opt/llvm/bin:$PATH LLVM_DIR=/usr/local/opt/llvm LDFLAGS:=-L/usr/local/opt/llvm/lib CPPFLAGS=-I/usr/local/opt/llvm/include
+        - CXX=clang++ PATH=/usr/local/opt/llvm/bin:$PATH LDFLAGS:=-L/usr/local/opt/llvm/lib CPPFLAGS=-I/usr/local/opt/llvm/include
         - CONFIG_ARGS="-DCMAKE_BUILD_TYPE:STRING=Debug"
       install: brew install llvm
       cache:
         directories: ~/Library/Caches/Homebrew/
     - os: osx
       env:
-        - CXX=clang++ PATH=/usr/local/opt/llvm/bin:$PATH LLVM_DIR=/usr/local/opt/llvm LDFLAGS:=-L/usr/local/opt/llvm/lib CPPFLAGS=-I/usr/local/opt/llvm/include
+        - CXX=clang++ PATH=/usr/local/opt/llvm/bin:$PATH LDFLAGS:=-L/usr/local/opt/llvm/lib CPPFLAGS=-I/usr/local/opt/llvm/include
         - CONFIG_ARGS=
       install: brew install llvm
       cache:
