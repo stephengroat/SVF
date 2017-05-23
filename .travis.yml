@@ -12,23 +12,19 @@ addons:
 matrix:
   include:
     - os: osx
-      env:
-        - PATH=/usr/local/opt/llvm/bin:$PATH LDFLAGS:=-L/usr/local/opt/llvm/lib CPPFLAGS=-I/usr/local/opt/llvm/include
-        - CONFIG_ARGS="-DCMAKE_BUILD_TYPE:STRING=Debug"
+      env: CONFIG_ARGS="-DCMAKE_BUILD_TYPE:STRING=Debug"
       install: brew install llvm
       cache:
-        directories: ~/Library/Caches/Homebrew/
+        directories: Library/Caches/Homebrew/
     - os: osx
-      env:
-        - PATH=/usr/local/opt/llvm/bin:$PATH LDFLAGS:=-L/usr/local/opt/llvm/lib CPPFLAGS=-I/usr/local/opt/llvm/include
-        - CONFIG_ARGS=
+      env: CONFIG_ARGS=
       install: brew install llvm
       cache:
-        directories: ~/Library/Caches/Homebrew/
+        directories: Library/Caches/Homebrew/
 env:
   global:
-    - CC=clang-4.0 CXX=clang++-4.0
     - PATH=$TRAVIS_BUILD_DIR/cmake-3.8.1-Linux-x86_64/bin:$PATH
+    - LLVM_DIR=/usr/lib/llvm-4.0
   matrix:
     - CONFIG_ARGS="-DCMAKE_BUILD_TYPE:STRING=Debug"
     - CONFIG_ARGS=
