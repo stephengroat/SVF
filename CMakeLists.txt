@@ -11,7 +11,7 @@ if(NOT COMMAND add_llvm_loadable_module)
         set(CMAKE_CXX_FLAGS "-std=gnu++11 -fno-rtti")
 
         find_package(LLVM REQUIRED CONFIG)
-        
+
         list(APPEND CMAKE_MODULE_PATH "${LLVM_CMAKE_DIR}")
         include(AddLLVM)
 
